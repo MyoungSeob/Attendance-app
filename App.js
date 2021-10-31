@@ -1,12 +1,14 @@
-import React from 'react'
-import {View, Text, SafeAreaView} from 'react-native'
-import Container from './src/shared/Container';
+import React from 'react';
+import StackContainer from './src/navigation/StackContainer';
+import { Provider } from 'react-redux';
+import {store} from './src/redux/store'
 
 const App = () => {
-
-  return(
-    <Container />
-  )
-}
+  return (
+    <Provider store={store}>
+      <StackContainer />
+    </Provider>
+  );
+};
 
 export default App;

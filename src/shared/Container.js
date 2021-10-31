@@ -5,7 +5,6 @@ const Container = () => {
   return (
     <SafeAreaView >
       <View style={styles.Container}>
-        <Text style={styles.Grid}>안녕하세요</Text>
       </View>
     </SafeAreaView>
   );
@@ -20,12 +19,8 @@ const styles = StyleSheet.create({
         bottom: 0,
         display: 'flex',
         height : '100%',
-        padding : 30
+        padding : 30,
     },
-    Grid : {
-      width: '100%',
-      backgroundColor : '#ffffff'
-    }
 })
 
 export default Container;
