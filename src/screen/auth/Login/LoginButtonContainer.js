@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/core';
 import React from 'react';
 import { Alert } from 'react-native';
 import { useSelector } from 'react-redux';
-import Button from '../../elements/Button';
+import Button from '../../../elements/Button'
 
 const LoginButtonContainer = (props) => {
     const navigation = useNavigation();

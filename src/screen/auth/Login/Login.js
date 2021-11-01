@@ -1,15 +1,15 @@
 import React from 'react';
 import {SafeAreaView, View, Text, StyleSheet, Dimensions} from 'react-native';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import LoginInput from '../../components/LoginInput';
-import Input from '../../elements/Input';
-import {ContainerStyle} from '../../shared/GlobalStyle';
+import LoginInput from '../../../components/LoginInput';
+import Input from '../../../elements/Input';
+import {ContainerStyle} from '../../../shared/GlobalStyle';
 
 const Login = () => {
 
   return (
     <>
-      <SafeAreaView />
+      <SafeAreaView style={{backgroundColor : "#e9ecef"}}/>
       <View style={ContainerStyle}>
         <View style={styles.container}>
           <View style={styles.titleTextContainer}>
