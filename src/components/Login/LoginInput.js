@@ -48,7 +48,7 @@ const LoginInput = () => {
         <CheckBox
           disabled={false}
           style={styles.checkbox}
-          lineWidth={2}
+          lineWidth={1}
           boxType="square"
           value={autoLogin}
           onChange={() => {
