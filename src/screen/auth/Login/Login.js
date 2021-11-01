@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, View, Text, StyleSheet, Dimensions} from 'react-native';
 import {getStatusBarHeight} from 'react-native-status-bar-height';
-import LoginInput from '../../../components/LoginInput';
+import LoginInput from '../../../components/Login/LoginInput';
 import Input from '../../../elements/Input';
 import {ContainerStyle} from '../../../shared/GlobalStyle';
 

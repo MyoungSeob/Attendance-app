@@ -23,7 +23,6 @@ const Input = props => {
 
   return (
     <View>
-      <Text>{props.name}</Text>
       <TextInput
         placeholder={props.placeholder}
         style={styles.container}
