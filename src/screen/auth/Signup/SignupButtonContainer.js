@@ -5,7 +5,7 @@ import Button from '../../../elements/Button'
 const SignupButtonContainer = () => {
 
     return(
-        <View style={{marginTop : 30}}>
+        <View style={{marginTop : 40}}>
             <Button name="회원가입"/>
         </View>
     )
