@@ -13,7 +13,7 @@ const Login = () => {
       <View style={ContainerStyle}>
         <View style={styles.container}>
           <View style={styles.titleTextContainer}>
-            <Text style={styles.titleText}>카-첵</Text>
+            <Text style={styles.titleText}>출-석부</Text>
           </View>
           <LoginInput/>
         </View>

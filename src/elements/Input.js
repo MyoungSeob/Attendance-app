@@ -1,24 +1,38 @@
-import React, {Children, useEffect, useState} from 'react';
+import React, {Children, useEffect, useMemo, useState} from 'react';
 import {TextInput, View, StyleSheet, Text, Alert, Keyboard} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {loginId, loginPassword} from '../redux/auth/auth';
+import { signUpId, signUpName, signUpPassword } from '../redux/auth/sign';
 
 const Input = props => {
   const [text, setText] = useState('');
   const dispatch = useDispatch();
+  console.log(props.password)
 
-  const id = useSelector(state => state.auth.loginId);
-  const password = useSelector(state => state.auth.loginPassword);
   const onPress = () => {
     Keyboard.dismiss();
   };
+  const isTypeOfInput = (data) => {
+    switch (data) {
+      case 'ID':
+        dispatch(loginId({loginId: text}));
+        break;
+      case 'Password':
+        dispatch(loginPassword({loginPassword: text}));
+        break;
+      case 'SignUpID' :
+        dispatch(signUpId({signUpId : text}));
+        break;
+      case 'SignUpPassword' :
+        dispatch(signUpPassword({signUpPassword : text}));
+        break;
+      case 'SignUpName' :
+        dispatch(signUpName({signUpName : text}));
+    }
+  }
 
   useEffect(() => {
-    if (props.type === 'ID') {
-      dispatch(loginId({loginId: text}));
-    } else if (props.type === 'Password') {
-      dispatch(loginPassword({loginPassword: text}));
-    }
+    isTypeOfInput(props.type)
   }, [text]);
 
   return (
@@ -33,6 +47,7 @@ const Input = props => {
         autoCapitalize="none"
         returnKeyType="done"
         onSubmitEditing={() => onPress()}
+        secureTextEntry={props.password ? true : false}
       />
     </View>
   );

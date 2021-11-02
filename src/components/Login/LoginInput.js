@@ -30,6 +30,7 @@ const LoginInput = () => {
         placeholder="비밀번호를 입력해주세요."
         name="비밀번호"
         type="Password"
+        password='true'
       />
       <View style={styles.checkboxContainer}>
         <TouchableOpacity
@@ -40,7 +41,7 @@ const LoginInput = () => {
           >
           <Text
             style={{
-              fontSize: 13,
+              fontSize: 15,
             }}>
             자동 로그인
           </Text>
@@ -62,14 +63,17 @@ const LoginInput = () => {
       <View style={{marginTop: 15}}>
         <Button name="회원가입" onPress={() => navigation.navigate('Signup')} />
       </View>
+      <TouchableOpacity style={styles.findMyAccount}>
+        <Text style={styles.findMyAccountText}>비밀번호 찾기</Text>
+      </TouchableOpacity>
     </>
   );
 };
 
 const styles = StyleSheet.create({
   checkbox: {
-    width: 13,
-    height: 13,
+    width: 15,
+    height: 15,
     marginHorizontal: 10,
     justifyContent: 'center',
   },
@@ -79,6 +83,14 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flexDirection: 'row',
   },
+  findMyAccount : {
+    marginTop : 15,
+    alignItems : 'flex-end',
+    marginRight : 10,
+  },
+  findMyAccountText : {
+    fontSize : 15
+  }
 });
 
 export default LoginInput;
